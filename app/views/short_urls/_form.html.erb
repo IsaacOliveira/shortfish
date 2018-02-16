@@ -1,0 +1,6 @@
+<%= form_with(url: short_urls_path) do |form| %>
+  <div class="form-group">
+    <%= form.url_field :original_url, class: "form-control col-sm-6", id: :short_url_original_url, required: true %>
+  </div>
+  <%= form.submit  class: "btn btn-primary" %>
+<% end %>
