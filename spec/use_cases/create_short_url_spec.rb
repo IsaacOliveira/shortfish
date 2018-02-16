@@ -6,7 +6,7 @@ RSpec.describe CreateShortUrl, type: :model do
 
   describe "#execute" do
     subject{ CreateShortUrl.new(original_url: original_url)}
-    it "calls short url creation method" do
+    it "creates short url creation method" do
       expect(ShortUrl).to receive(:create_for_url).with(original_url)
       subject.execute
     end
